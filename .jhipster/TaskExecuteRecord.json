@@ -1,0 +1,65 @@
+{
+  "name": "TaskExecuteRecord",
+  "fields": [
+    {
+      "fieldName": "taskId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "taskType",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "taskName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stepRecordNum",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "executeTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "finishTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "taskStepExecuteRecord",
+      "otherEntityRelationshipName": "taskExecuteRecord",
+      "relationshipName": "taskStepExecuteRecord"
+    }
+  ],
+  "entityTableName": "task_execute_record",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["TaskService"],
+  "changelogDate": "20210127085805"
+}

@@ -1,0 +1,29 @@
+{
+  "taskServiceApp": {
+    "taskStep": {
+      "home": {
+        "title": "Task Steps",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Step",
+        "createOrEditLabel": "Create or edit a Task Step",
+        "notFound": "No Task Steps found"
+      },
+      "created": "A new Task Step is created with identifier {{ param }}",
+      "updated": "A Task Step is updated with identifier {{ param }}",
+      "deleted": "A Task Step is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Step {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Step"
+      },
+      "id": "ID",
+      "name": "Name",
+      "order": "Order",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "delFlag": "Del Flag",
+      "task": "Task"
+    }
+  }
+}

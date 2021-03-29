@@ -1,0 +1,32 @@
+{
+  "taskServiceApp": {
+    "taskStepExecuteRecord": {
+      "home": {
+        "title": "Task Step Execute Records",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Task Step Execute Record",
+        "createOrEditLabel": "创建或编辑 Task Step Execute Record",
+        "notFound": "No Task Step Execute Records found"
+      },
+      "created": "Task Step Execute Record {{ param }} 创建成功",
+      "updated": "Task Step Execute Record {{ param }} 更新成功",
+      "deleted": "Task Step Execute Record {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Task Step Execute Record {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Task Step Execute Record"
+      },
+      "id": "ID",
+      "taskId": "Task Id",
+      "taskStepId": "Task Step Id",
+      "taskStepExecuteOrder": "Task Step Execute Order",
+      "status": "Status",
+      "executeTime": "Execute Time",
+      "finishTime": "Finish Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "taskExecuteRecord": "Task Execute Record"
+    }
+  }
+}

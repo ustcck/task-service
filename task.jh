@@ -1,0 +1,69 @@
+application {
+  config {
+    baseName TaskService,
+    applicationType monolith,
+    authenticationType jwt
+    packageName com.lenovo.cloud.task,
+    devDatabaseType mysql,
+    prodDatabaseType mysql,
+    cacheProvider no,
+    buildTool maven,
+    clientFramework vue,
+    nativeLanguage zh-cn,
+    languages [en, zh-cn]
+  }
+  entities *
+}
+
+entity Task {
+	name String required,
+	type Integer required,
+	level Integer required,
+	createTime Instant required,
+	updateTime Instant required,
+	delFlag Integer required,
+}
+
+entity TaskStep {
+	name String required,
+	order Integer required,
+	createTime Instant required,
+	updateTime Instant required,
+	delFlag Integer required,
+}
+
+entity TaskExecuteRecord {
+	taskId Long required,
+	taskType Integer required,
+	taskName String,
+	stepRecordNum Integer required,
+	executeTime Instant,
+	finishTime Instant,
+	status Integer required,
+	createTime Instant required,
+	updateTime Instant required,
+}
+
+entity TaskStepExecuteRecord {
+	taskId Long,
+	taskStepId Long,
+	taskStepExecuteOrder Integer,
+	status Integer required,
+	executeTime Instant,
+	finishTime Instant,
+	createTime Instant required,
+	updateTime Instant required,
+}
+
+relationship ManyToOne {
+    TaskStep{task} to Task{taskStep}
+}
+
+relationship ManyToOne {
+    TaskStepExecuteRecord{taskExecuteRecord} to TaskExecuteRecord{taskStepExecuteRecord}
+}
+
+filter *
+paginate * with pagination
+
+service all with serviceClass
